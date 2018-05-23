@@ -2,12 +2,12 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Book List
-        <b-link href="#/add-book">(Add Book)</b-link>
+        Listagem de livros
+        <b-link class="btn" href="#/add_book">(Adicionar livro)</b-link>
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
-          <b-btn size="sm" @click.stop="details(row.item)">Details</b-btn>
+          <b-btn size="sm" class="btn" @click.stop="details(row.item)">Detalhes</b-btn>
         </template>
       </b-table>
     </b-col>
@@ -23,8 +23,8 @@ export default {
   data () {
     return {
       fields: {
-        title: { label: 'Book Title', sortable: true },
-        actions: { label: 'Action', 'class': 'text-center' }
+        title: { label: 'Titulo', sortable: true },
+        actions: { label: 'Ações', 'class': 'text-center' }
       },
       books: [],
       errors: []

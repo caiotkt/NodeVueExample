@@ -2,25 +2,25 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Edit Book
-        <b-link href="#/">(Book List)</b-link>
+        Editar livro
+        <b-link href="#/">Voltar para listagem</b-link>
       </h2>
       <b-jumbotron>
         <template slot="header">
           {{book.title}}
         </template>
         <template slot="lead">
-          Author: {{book.author}}<br>
-          Description: {{book.description}}<br>
-          Published Year: {{book.published_year}}<br>
-          Publisher: {{book.publisher}}<br>
+          Autor: {{book.author}}<br>
+          Descrição: {{book.description}}<br>
+          Ano da publicação: {{book.published_year}}<br>
+          Editora: {{book.publisher}}<br>
         </template>
         <hr class="my-4">
         <p>
-          Updated Date: {{book.updated_date}}
+          Data da atualização: {{book.updated_date}}
         </p>
-        <b-btn variant="success" @click.stop="editbook(book._id)">Edit</b-btn>
-        <b-btn variant="danger" @click.stop="deletebook(book._id)">Delete</b-btn>
+        <b-btn variant="success" @click.stop="editbook(book._id)">Editar</b-btn>
+        <b-btn variant="danger" @click.stop="deletebook(book._id)">Excluir</b-btn>
       </b-jumbotron>
     </b-col>
   </b-row>
