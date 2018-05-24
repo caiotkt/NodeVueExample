@@ -1,7 +1,7 @@
 <template>
   <b-row>
     <b-col cols="12">
-      <h2>
+      <h2 class="font-title">
         Editar livro
       </h2>
       <b-form @submit="onSubmit">

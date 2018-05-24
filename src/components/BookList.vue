@@ -1,15 +1,23 @@
 <template>
   <b-row>
     <b-col cols="12">
-      <h2>
+      <h2 class="font-title">
         Listagem de livros
-        <b-link class="btn" href="#/add_book">(Adicionar livro)</b-link>
       </h2>
-      <b-table striped hover :items="books" :fields="fields">
-        <template slot="actions" scope="row">
-          <b-btn size="sm" class="btn" @click.stop="details(row.item)">Detalhes</b-btn>
-        </template>
-      </b-table>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Título</td>
+            <td>Ações</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-bind:key="book" v-for="book in books">
+            <td>{{ book.title }}</td>
+            <td><button class="btn" @click.stop="details(book)">Detalhes</button></td>
+          </tr>
+        </tbody>
+      </table>
     </b-col>
   </b-row>
 </template>

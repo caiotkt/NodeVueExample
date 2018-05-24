@@ -3,11 +3,12 @@
     <b-col cols="12">
       <h2>
         Editar livro
-        <b-link href="#/">Voltar para listagem</b-link>
       </h2>
       <b-jumbotron>
         <template slot="header">
-          {{book.title}}
+          <div class="font-title">
+            {{book.title}}
+          </div>
         </template>
         <template slot="lead">
           Autor: {{book.author}}<br>

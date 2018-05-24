@@ -1,28 +1,27 @@
 <template>
   <b-row>
     <b-col cols="12">
-      <h2>
+      <h2 class="font-title">
         Adicionar livro
-        <b-link href="#/">Voltar para listagem</b-link>
       </h2>
       <b-form @submit="onSubmit">
         <b-form-group id="fieldsetHorizontal"
                   horizontal
-                  :label-cols="4"
+                  :label-cols="2"
                   breakpoint="md"
                   label="Título">
           <b-form-input id="title" :state="state" v-model.trim="book.title"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
-                  :label-cols="4"
+                  :label-cols="2"
                   breakpoint="md"
                   label="Autor">
           <b-form-input id="author" :state="state" v-model.trim="book.author"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
-                  :label-cols="4"
+                  :label-cols="2"
                   breakpoint="md"
                   label="Descrição">
             <b-form-textarea id="description"
@@ -33,14 +32,14 @@
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
-                  :label-cols="4"
+                  :label-cols="2"
                   breakpoint="md"
                   label="Ano da publicação">
           <b-form-input id="published_year" :state="state" v-model.trim="book.published_year"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
-                  :label-cols="4"
+                  :label-cols="2"
                   breakpoint="md"
                   label="Editora">
           <b-form-input id="publisher" :state="state" v-model.trim="book.publisher"></b-form-input>

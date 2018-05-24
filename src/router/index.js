@@ -4,6 +4,7 @@ import BookList from '@/components/BookList'
 import ShowBook from '@/components/ShowBook'
 import CreateBook from '@/components/CreateBook'
 import EditBook from '@/components/EditBook'
+import BookSig from '@/components/BookSig'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/edit_book/:id',
       name: 'EditBook',
       component: EditBook
+    },
+    {
+      path: '/book_sig',
+      name: 'BookSig',
+      component: BookSig
     }
   ]
 })

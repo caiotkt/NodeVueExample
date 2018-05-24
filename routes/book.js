@@ -3,14 +3,21 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Book = require('../models/Book.js');
 
-/* GET ALL BOOKS */
-router.get('/', function(req, res, next) {
-  Book.find(function (err, products) {
+/* SIG */
+router.get('/sig', function(req, res, next) {
+  Book.count({}, function (err, books) {
     if (err) return next(err);
-    res.json(products);
+    res.json(books);
   });
 });
 
+/* GET ALL BOOKS */
+router.get('/', function(req, res, next) {
+  Book.find(function (err, books) {
+    if (err) return next(err);
+    res.json(books);
+  });
+});
 /* GET SINGLE BOOK BY ID */
 router.get('/:id', function(req, res, next) {
   Book.findById(req.params.id, function (err, post) {
@@ -42,5 +49,4 @@ router.delete('/:id', function(req, res, next) {
     res.json(post);
   });
 });
-
 module.exports = router;
